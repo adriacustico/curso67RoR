@@ -1,0 +1,62 @@
+        @media only screen and (max-width: 480px) {
+            /* we will set these stylings only if the device is a screen with a width of 480px or less */
+            h1 {
+                background-color: #b3b3b3;
+                color: black;
+            }
+            p {
+                background-color: #cccccc;
+            }
+            #phone {
+                background-color: #ffff9a;
+                border-color: black;
+            }
+            #desktop {
+                display: none;
+            }
+            #tablet {
+                display: none;
+            }
+        }
+        
+        @media only screen and (min-width: 481px) and (max-width: 1023px) {
+            /* we will set these stylings only if the device is a screen with a width of 480px or less */
+            h1 {
+                background-color: #b3b3b3;
+                color: black;
+            }
+            p {
+                background-color: #cccccc;
+            }
+            #phone {
+                display: none;
+            }
+            #desktop {
+                display: none;
+            }
+            #tablet {
+                background-color: #ffff9a;
+                border-color: black;
+            }
+        }
+        
+        @media only screen and (min-width: 1024px) {
+            /* we will set these stylings only if the device is a screen with a width of 480px or less */
+            h1 {
+                background-color: #b3b3b3;
+                color: black;
+            }
+            p {
+                background-color: #cccccc;
+            }
+            #phone {
+                display: none;
+            }
+            #desktop {
+                background-color: #ffff9a;
+                border-color: black;
+            }
+            #tablet {
+                display: none;
+            }
+        }
