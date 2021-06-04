@@ -23,10 +23,11 @@
             /* we will set these stylings only if the device is a screen with a width of 480px or less */
             h1 {
                 background-color: #b3b3b3;
-                color: black;
+                border: 1px black;
             }
             p {
                 background-color: #cccccc;
+                border: 1px black;
             }
             #phone {
                 display: none;
@@ -36,7 +37,7 @@
             }
             #tablet {
                 background-color: #ffff9a;
-                border-color: black;
+                border: 1px black;
             }
         }
         
@@ -44,17 +45,18 @@
             /* we will set these stylings only if the device is a screen with a width of 480px or less */
             h1 {
                 background-color: #b3b3b3;
-                color: black;
+                border: 1px 1px 1px black;
             }
             p {
                 background-color: #cccccc;
+                border: 1px black;
             }
             #phone {
                 display: none;
             }
             #desktop {
                 background-color: #ffff9a;
-                border-color: black;
+                border: 1px black;
             }
             #tablet {
                 display: none;
