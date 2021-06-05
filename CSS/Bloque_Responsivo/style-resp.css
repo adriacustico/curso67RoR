@@ -1,15 +1,17 @@
-@media only screen and (max-width:480px) {
+@media only screen and (min-width:1024px) {
     .header {
         width: 97%;
     }
     .main-content {
-        width: 97%;
+        width: 70%;
     }
     .navigation {
-        display: none;
+        width: 25%;
+        display: inline-block;
     }
     .subcontents {
-        width: 95%;
+        width: 30%;
+        display: inline-block;
     }
 }
 
@@ -29,20 +31,18 @@
     }
 }
 
-@media only screen and (min-width:1024px) {
+@media only screen and (max-width:480px) {
     .header {
         width: 97%;
     }
     .main-content {
-        width: 70%;
+        width: 97%;
     }
     .navigation {
-        width: 25%;
-        display: inline-block;
+        display: none;
     }
     .subcontents {
-        width: 30%;
-        display: inline-block;
+        width: 95%;
     }
 }
 
