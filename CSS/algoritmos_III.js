@@ -116,10 +116,8 @@ console.log(y); // should log 5
 function returnOddArray() {
     var array = [];
     var impar = 0;
-    for (i = 1; impar < 255; i++) {
-        impar = 2 * i - 1
-        array.push(impar)
-
+    for (i = 1; i < 255; i += 2) {
+        array.push(i)
     }
     return array
 }
