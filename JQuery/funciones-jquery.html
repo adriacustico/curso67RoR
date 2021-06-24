@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // estructura de los jquery --> $().accion(function(){});
+            // todos los button de la pagina se ven afectados
+            $('#addclass').click(function() {
+                $('#parrafo1').addClass('red')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <button id="addclass">AddClass</button>
+        <div>
+            <h1>AddClass</h1>
+            <p id="parrafo1">Click this button to add class "red" to this paragraph</p>
+        </div>
+        <hr>
+    </div>
+    <div>
+        <button>Slidetoggle</button>
+        <div>
+            <h1>Slidetoggle</h1>
+            <p>Click this button to slidetoggle a hidden image</p>
+        </div>
+        <hr>
+    </div>
+    <div>
+        <button>Append</button>
+        <div>
+            <h1>Append</h1>
+            <p>Click this button to append a new paragraph</p>
+        </div>
+        <hr>
+    </div>
+</body>
+
+</html>
