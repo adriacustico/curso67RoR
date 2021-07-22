@@ -1,0 +1,1815 @@
+Started GET "/" for 10.0.2.2 at 2021-07-19 19:16:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (15.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 32.2ms | Allocations: 595)
+Completed 200 OK in 207ms (Views: 86.1ms | ActiveRecord: 0.0ms | Allocations: 4729)
+
+
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsuarios (20210721172902)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "edad" integer, "email" varchar, "contrasena" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (20.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721172902"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (8.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-21 19:52:15.740028"], ["updated_at", "2021-07-21 19:52:15.740028"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 10.0.2.2 at 2021-07-21 19:55:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210721195317_create_clientes.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/rails/actions" for 10.0.2.2 at 2021-07-21 19:56:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20210721195317)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (39.4ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "edad" integer, "email" varchar, "contrasena" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (19.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721195317"]]
+  [1m[36mTRANSACTION (35.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (57.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 10.0.2.2 at 2021-07-21 19:56:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 40.0ms | Allocations: 268)
+Completed 200 OK in 177ms (Views: 100.1ms | ActiveRecord: 0.0ms | Allocations: 2526)
+
+
+Started GET "/clientes" for 10.0.2.2 at 2021-07-21 19:56:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (3.6ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 1341)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /vagrant/Curso67/fundamentalsRails/primerApp/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 21154ms
+Built at: 07/21/2021 7:57:13 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 43680.8ms | Allocations: 18867)
+Completed 200 OK in 43789ms (Views: 43697.4ms | ActiveRecord: 3.6ms | Allocations: 21613)
+
+
+Started GET "/" for 10.0.2.2 at 2021-07-21 20:01:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.3ms | Allocations: 490)
+Completed 200 OK in 73ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 3830)
+
+
+Started GET "/" for 10.0.2.2 at 2021-07-21 20:02:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.0ms | Allocations: 261)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 1265)
+
+
+Started GET "/" for 10.0.2.2 at 2021-07-21 20:06:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 46)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 525)
+
+
+Started GET "/clientes" for 10.0.2.2 at 2021-07-21 20:06:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (10.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 1381)
+  Rendered layout layouts/application.html.erb (Duration: 338.0ms | Allocations: 6037)
+Completed 200 OK in 386ms (Views: 340.0ms | ActiveRecord: 10.9ms | Allocations: 8142)
+
+
+Started GET "/clientes/new" for 10.0.2.2 at 2021-07-21 20:07:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (Duration: 369.4ms | Allocations: 8415)
+  Rendered clientes/new.html.erb within layouts/application (Duration: 428.7ms | Allocations: 8825)
+  Rendered layout layouts/application.html.erb (Duration: 624.9ms | Allocations: 10644)
+Completed 200 OK in 693ms (Views: 640.3ms | ActiveRecord: 18.5ms | Allocations: 15818)
+
+
+Started POST "/clientes" for 10.0.2.2 at 2021-07-21 20:08:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cliente"=>{"nombre"=>"Adrian", "apellido"=>"Calcumil", "edad"=>"333", "email"=>"asri@gmaild.com", "contrasena"=>"hola"}, "commit"=>"Create Cliente"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  [1m[36mCliente Create (59.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "apellido", "edad", "email", "contrasena", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "Adrian"], ["apellido", "Calcumil"], ["edad", 333], ["email", "asri@gmaild.com"], ["contrasena", "hola"], ["created_at", "2021-07-21 20:08:19.029307"], ["updated_at", "2021-07-21 20:08:19.029307"]]
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (29.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+Redirected to http://0.0.0.0:3000/clientes/1
+Completed 302 Found in 140ms (ActiveRecord: 89.9ms | Allocations: 5159)
+
+
+Started GET "/clientes/1" for 10.0.2.2 at 2021-07-21 20:08:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (5.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:62:in `set_cliente'
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/show.html.erb within layouts/application
+  Rendered clientes/show.html.erb within layouts/application (Duration: 14.8ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 134.6ms | Allocations: 2264)
+Completed 200 OK in 197ms (Views: 143.4ms | ActiveRecord: 5.1ms | Allocations: 4300)
+
+
+Started GET "/clientes" for 10.0.2.2 at 2021-07-21 20:08:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (18.0ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 857)
+  Rendered layout layouts/application.html.erb (Duration: 346.9ms | Allocations: 3162)
+Completed 200 OK in 403ms (Views: 382.7ms | ActiveRecord: 18.0ms | Allocations: 3659)
+
+
+Started GET "/clientes" for 10.0.2.2 at 2021-07-21 21:42:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (8.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (Duration: 87.5ms | Allocations: 6273)
+  Rendered layout layouts/application.html.erb (Duration: 511.8ms | Allocations: 10963)
+Completed 200 OK in 689ms (Views: 538.0ms | ActiveRecord: 32.0ms | Allocations: 15474)
+
+
+Started GET "/clientes/new" for 10.0.2.2 at 2021-07-21 21:48:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (Duration: 129.7ms | Allocations: 6166)
+  Rendered clientes/new.html.erb within layouts/application (Duration: 147.0ms | Allocations: 6576)
+  Rendered layout layouts/application.html.erb (Duration: 187.6ms | Allocations: 8412)
+Completed 200 OK in 214ms (Views: 193.7ms | ActiveRecord: 0.0ms | Allocations: 9213)
+
+
+Started POST "/clientes" for 10.0.2.2 at 2021-07-21 21:49:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cliente"=>{"nombre"=>"", "apellido"=>"", "edad"=>"", "email"=>"", "contrasena"=>""}, "commit"=>"Create Cliente"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  [1m[36mCliente Create (14.5ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "apellido", "email", "contrasena", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", ""], ["apellido", ""], ["email", ""], ["contrasena", ""], ["created_at", "2021-07-21 21:49:00.189172"], ["updated_at", "2021-07-21 21:49:00.189172"]]
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+Redirected to http://0.0.0.0:3000/clientes/2
+Completed 302 Found in 92ms (ActiveRecord: 32.7ms | Allocations: 5699)
+
+
+Started GET "/clientes/2" for 10.0.2.2 at 2021-07-21 21:49:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (2.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:62:in `set_cliente'
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/show.html.erb within layouts/application
+  Rendered clientes/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 2600)
+Completed 200 OK in 74ms (Views: 54.3ms | ActiveRecord: 2.2ms | Allocations: 4616)
+
+
+Started GET "/clientes/2/edit" for 10.0.2.2 at 2021-07-21 21:49:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (3.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:62:in `set_cliente'
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/edit.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (Duration: 9.3ms | Allocations: 1342)
+  Rendered clientes/edit.html.erb within layouts/application (Duration: 17.6ms | Allocations: 1615)
+  Rendered layout layouts/application.html.erb (Duration: 115.7ms | Allocations: 3305)
+Completed 200 OK in 154ms (Views: 118.8ms | ActiveRecord: 3.9ms | Allocations: 4571)
+
+
+Started GET "/clientes" for 10.0.2.2 at 2021-07-21 21:49:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (2.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 975)
+  Rendered layout layouts/application.html.erb (Duration: 118.5ms | Allocations: 2755)
+Completed 200 OK in 127ms (Views: 122.5ms | ActiveRecord: 2.4ms | Allocations: 3233)
+
+
+Started DELETE "/clientes/2" for 10.0.2.2 at 2021-07-21 21:49:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mCliente Load (4.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:62:in `set_cliente'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:52:in `destroy'
+  [1m[36mCliente Destroy (13.9ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/clientes_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (20.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes_controller.rb:52:in `destroy'
+Redirected to http://0.0.0.0:3000/clientes
+Completed 302 Found in 162ms (ActiveRecord: 39.0ms | Allocations: 5029)
+
+
+Started GET "/clientes" for 10.0.2.2 at 2021-07-21 21:49:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (3.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 832)
+  Rendered layout layouts/application.html.erb (Duration: 78.9ms | Allocations: 2546)
+Completed 200 OK in 86ms (Views: 81.0ms | ActiveRecord: 3.3ms | Allocations: 3016)
+
+
+Started GET "/clientes" for 10.0.2.2 at 2021-07-21 21:49:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (2.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (Duration: 39.2ms | Allocations: 6273)
+  Rendered layout layouts/application.html.erb (Duration: 390.0ms | Allocations: 10963)
+Completed 200 OK in 474ms (Views: 391.6ms | ActiveRecord: 12.7ms | Allocations: 15806)
+
+
+Started GET "/clientes/new" for 10.0.2.2 at 2021-07-21 21:49:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (Duration: 71.9ms | Allocations: 3835)
+  Rendered clientes/new.html.erb within layouts/application (Duration: 90.5ms | Allocations: 4245)
+  Rendered layout layouts/application.html.erb (Duration: 153.8ms | Allocations: 6064)
+Completed 200 OK in 180ms (Views: 157.0ms | ActiveRecord: 0.0ms | Allocations: 6867)
+
+
+Started POST "/clientes" for 10.0.2.2 at 2021-07-21 21:49:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cliente"=>{"nombre"=>"", "apellido"=>"", "edad"=>"", "email"=>"", "contrasena"=>""}, "commit"=>"Create Cliente"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  [1m[36mCliente Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE LOWER("clientes"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/clientes_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (Duration: 15.9ms | Allocations: 6845)
+  Rendered clientes/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 6965)
+  Rendered layout layouts/application.html.erb (Duration: 129.6ms | Allocations: 8781)
+Completed 422 Unprocessable Entity in 171ms (Views: 134.5ms | ActiveRecord: 2.8ms | Allocations: 13567)
+
+
+Started GET "/" for 10.0.2.2 at 2021-07-21 23:33:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (10.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210721233237_create_libros.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/rails/actions" for 10.0.2.2 at 2021-07-21 23:33:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLibros (20210721233237)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (25.3ms)[0m  [1m[35mCREATE TABLE "libros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "descripcion" varchar, "isb" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721233237"]]
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (12.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 10.0.2.2 at 2021-07-21 23:33:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 31.7ms | Allocations: 268)
+Completed 200 OK in 76ms (Views: 44.9ms | ActiveRecord: 0.0ms | Allocations: 2536)
+
+
+Started GET "/libros" for 10.0.2.2 at 2021-07-21 23:33:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LibrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libros/index.html.erb within layouts/application
+  [1m[36mLibro Load (7.1ms)[0m  [1m[34mSELECT "libros".* FROM "libros"[0m
+  ↳ app/views/libros/index.html.erb:16
+  Rendered libros/index.html.erb within layouts/application (Duration: 33.3ms | Allocations: 1379)
+  Rendered layout layouts/application.html.erb (Duration: 1754.8ms | Allocations: 20761)
+Completed 200 OK in 1902ms (Views: 1800.5ms | ActiveRecord: 7.1ms | Allocations: 23504)
+
+
+Started GET "/libros/new" for 10.0.2.2 at 2021-07-21 23:33:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LibrosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libros/new.html.erb within layouts/application
+  Rendered libros/_form.html.erb (Duration: 136.3ms | Allocations: 3252)
+  Rendered libros/new.html.erb within layouts/application (Duration: 171.8ms | Allocations: 3623)
+  Rendered layout layouts/application.html.erb (Duration: 343.7ms | Allocations: 5498)
+Completed 200 OK in 428ms (Views: 353.6ms | ActiveRecord: 22.0ms | Allocations: 9229)
+
+
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (31.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailColumnToUsers (20210721233913)
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (40.2ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailColumnToUsers (20210721233913)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLibros (20210721233237)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (17.0ms)[0m  [1m[35mDROP TABLE "libros"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (13.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210721233237"]]
+  [1m[36mTRANSACTION (250.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLibros (20210721233237)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "libros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "descripcion" varchar, "isb" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (7.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721233237"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 10.0.2.2 at 2021-07-22 00:05:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210722000039_create_autors.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/rails/actions" for 10.0.2.2 at 2021-07-22 00:06:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAutors (20210722000039)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (60.3ms)[0m  [1m[35mCREATE TABLE "autors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "nacionalidad" varchar, "nacimiento" varchar, "datetime" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (15.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210722000039"]]
+  [1m[36mTRANSACTION (26.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (10.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 10.0.2.2 at 2021-07-22 00:06:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.4ms | Allocations: 268)
+Completed 200 OK in 102ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 2659)
+
+
+Started GET "/libros" for 10.0.2.2 at 2021-07-22 00:06:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LibrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libros/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/libros/index.html.erb:16
+  [1m[36mLibro Load (2.5ms)[0m  [1m[34mSELECT "libros".* FROM "libros"[0m
+  ↳ app/views/libros/index.html.erb:16
+  Rendered libros/index.html.erb within layouts/application (Duration: 47.5ms | Allocations: 2027)
+  Rendered layout layouts/application.html.erb (Duration: 2054.8ms | Allocations: 7034)
+Completed 200 OK in 2155ms (Views: 2085.1ms | ActiveRecord: 5.5ms | Allocations: 9157)
+
+
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAutors (20210722000039)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (19.7ms)[0m  [1m[35mDROP TABLE "autors"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (5.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210722000039"]]
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLibros (20210721233237)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (22.3ms)[0m  [1m[35mDROP TABLE "libros"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (12.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210721233237"]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20210721195317)
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.0ms)[0m  [1m[35mDROP TABLE "clientes"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (5.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210721195317"]]
+  [1m[36mTRANSACTION (22.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20210721195317)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (29.0ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "edad" integer, "email" varchar, "contrasena" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (15.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721195317"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLibros (20210721233237)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (28.1ms)[0m  [1m[35mCREATE TABLE "libros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "descripcion" varchar, "isb" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (15.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721233237"]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAutors (20210722000039)
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "autors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "nacionalidad" varchar, "nacimiento" varchar, "datetime" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (17.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210722000039"]]
+  [1m[36mTRANSACTION (64.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 10.0.2.2 at 2021-07-22 00:27:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 63.2ms | Allocations: 566)
+Completed 200 OK in 202ms (Views: 98.0ms | ActiveRecord: 0.0ms | Allocations: 4073)
+
+
+Started GET "/" for 10.0.2.2 at 2021-07-22 01:07:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.3ms | Allocations: 261)
+Completed 200 OK in 45ms (Views: 43.3ms | Allocations: 1259)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:07:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mUsuario Load (5.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 49.1ms | Allocations: 2128)
+  Rendered layout layouts/application.html.erb (Duration: 1871.6ms | Allocations: 22714)
+Completed 200 OK in 1943ms (Views: 1902.6ms | ActiveRecord: 10.8ms | Allocations: 24852)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 01:10:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 343.5ms | Allocations: 6260)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 383.7ms | Allocations: 6670)
+  Rendered layout layouts/application.html.erb (Duration: 1059.8ms | Allocations: 8627)
+Completed 200 OK in 1227ms (Views: 1087.7ms | ActiveRecord: 52.3ms | Allocations: 13897)
+
+
+Started POST "/usuarios" for 10.0.2.2 at 2021-07-22 01:10:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"nombre"=>"Adrian", "apellido"=>"CAlcumil", "edad"=>"221", "email"=>"adsdkfjsn@gmai.com", "contrasena"=>"dskfnadjksgnadkf"}, "commit"=>"Create Usuario"}
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mUsuario Create (74.2ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "apellido", "edad", "email", "contrasena", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "Adrian"], ["apellido", "CAlcumil"], ["edad", 221], ["email", "adsdkfjsn@gmai.com"], ["contrasena", "dskfnadjksgnadkf"], ["created_at", "2021-07-22 01:10:57.481292"], ["updated_at", "2021-07-22 01:10:57.481292"]]
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 198ms (ActiveRecord: 109.9ms | Allocations: 5106)
+
+
+Started GET "/usuarios/1" for 10.0.2.2 at 2021-07-22 01:10:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (8.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:62:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 421)
+  Rendered layout layouts/application.html.erb (Duration: 151.6ms | Allocations: 2365)
+Completed 200 OK in 251ms (Views: 156.1ms | ActiveRecord: 8.5ms | Allocations: 4793)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:11:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (15.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 49.5ms | Allocations: 856)
+  Rendered layout layouts/application.html.erb (Duration: 422.5ms | Allocations: 2675)
+Completed 200 OK in 464ms (Views: 444.6ms | ActiveRecord: 15.7ms | Allocations: 3173)
+
+
+  [1m[35m (13.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAutors (20210722000039)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.6ms)[0m  [1m[35mDROP TABLE "autors"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210722000039"]]
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLibros (20210721233237)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (17.0ms)[0m  [1m[35mDROP TABLE "libros"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (12.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210721233237"]]
+  [1m[36mTRANSACTION (35.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateClientes (20210721195317)
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (40.8ms)[0m  [1m[35mDROP TABLE "clientes"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (7.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210721195317"]]
+  [1m[36mTRANSACTION (20.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20210721172902)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (25.2ms)[0m  [1m[35mDROP TABLE "usuarios"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (6.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210721172902"]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRols (20210721011600)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (20.1ms)[0m  [1m[35mCREATE TABLE "rols" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721011600"]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateClientes (20210721195317)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "edad" integer, "email" varchar, "contrasena" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (8.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721195317"]]
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLibros (20210721233237)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "libros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "descripcion" varchar, "isb" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (102.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210721233237"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAutors (20210722000039)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (39.3ms)[0m  [1m[35mCREATE TABLE "autors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "nacionalidad" varchar, "nacimiento" varchar, "datetime" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (19.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210722000039"]]
+  [1m[36mTRANSACTION (80.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20210722011953)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apellido" varchar, "edad" integer, "email" varchar, "contrasena" varchar, "rol_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9d2c279a44"
+FOREIGN KEY ("rol_id")
+  REFERENCES "rols" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_usuarios_on_rol_id" ON "usuarios" ("rol_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210722011953"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/rols" for 10.0.2.2 at 2021-07-22 01:23:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RolsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/index.html.erb within layouts/application
+  [1m[36mRol Load (5.8ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/rols/index.html.erb:14
+  Rendered rols/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 1647)
+  Rendered layout layouts/application.html.erb (Duration: 2517.2ms | Allocations: 25740)
+Completed 200 OK in 2762ms (Views: 2565.7ms | ActiveRecord: 5.8ms | Allocations: 30788)
+
+
+Started GET "/rols/new" for 10.0.2.2 at 2021-07-22 01:23:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/new.html.erb within layouts/application
+  Rendered rols/_form.html.erb (Duration: 51.0ms | Allocations: 2804)
+  Rendered rols/new.html.erb within layouts/application (Duration: 72.3ms | Allocations: 3216)
+  Rendered layout layouts/application.html.erb (Duration: 151.3ms | Allocations: 5202)
+Completed 200 OK in 201ms (Views: 156.6ms | ActiveRecord: 23.2ms | Allocations: 8638)
+
+
+Started POST "/rols" for 10.0.2.2 at 2021-07-22 01:24:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rol"=>{"nombre"=>"Administrador"}, "commit"=>"Create Rol"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mRol Create (15.9ms)[0m  [1m[32mINSERT INTO "rols" ("nombre", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nombre", "Administrador"], ["created_at", "2021-07-22 01:24:08.230599"], ["updated_at", "2021-07-22 01:24:08.230599"]]
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (60.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/rols/1
+Completed 302 Found in 174ms (ActiveRecord: 76.7ms | Allocations: 5193)
+
+
+Started GET "/rols/1" for 10.0.2.2 at 2021-07-22 01:24:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRol Load (10.3ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rols_controller.rb:62:in `set_rol'
+  Rendering layout layouts/application.html.erb
+  Rendering rols/show.html.erb within layouts/application
+  Rendered rols/show.html.erb within layouts/application (Duration: 17.2ms | Allocations: 323)
+  Rendered layout layouts/application.html.erb (Duration: 523.2ms | Allocations: 2327)
+Completed 200 OK in 842ms (Views: 650.5ms | ActiveRecord: 10.3ms | Allocations: 6253)
+
+
+Started GET "/rols" for 10.0.2.2 at 2021-07-22 01:24:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/index.html.erb within layouts/application
+  [1m[36mRol Load (8.7ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/rols/index.html.erb:14
+  Rendered rols/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 855)
+  Rendered layout layouts/application.html.erb (Duration: 157.0ms | Allocations: 2738)
+Completed 200 OK in 166ms (Views: 154.0ms | ActiveRecord: 8.7ms | Allocations: 3249)
+
+
+Started GET "/rols/new" for 10.0.2.2 at 2021-07-22 01:24:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/new.html.erb within layouts/application
+  Rendered rols/_form.html.erb (Duration: 17.2ms | Allocations: 566)
+  Rendered rols/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 683)
+  Rendered layout layouts/application.html.erb (Duration: 253.2ms | Allocations: 2543)
+Completed 200 OK in 267ms (Views: 265.2ms | ActiveRecord: 0.0ms | Allocations: 3014)
+
+
+Started POST "/rols" for 10.0.2.2 at 2021-07-22 01:24:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rol"=>{"nombre"=>"Secretaria"}, "commit"=>"Create Rol"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mRol Create (18.6ms)[0m  [1m[32mINSERT INTO "rols" ("nombre", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nombre", "Secretaria"], ["created_at", "2021-07-22 01:24:23.660955"], ["updated_at", "2021-07-22 01:24:23.660955"]]
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/rols/2
+Completed 302 Found in 108ms (ActiveRecord: 36.8ms | Allocations: 4629)
+
+
+Started GET "/rols/2" for 10.0.2.2 at 2021-07-22 01:24:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRol Load (5.9ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rols_controller.rb:62:in `set_rol'
+  Rendering layout layouts/application.html.erb
+  Rendering rols/show.html.erb within layouts/application
+  Rendered rols/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 125.7ms | Allocations: 1977)
+Completed 200 OK in 154ms (Views: 133.9ms | ActiveRecord: 5.9ms | Allocations: 2985)
+
+
+Started GET "/rols" for 10.0.2.2 at 2021-07-22 01:24:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/index.html.erb within layouts/application
+  [1m[36mRol Load (5.3ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/rols/index.html.erb:14
+  Rendered rols/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 920)
+  Rendered layout layouts/application.html.erb (Duration: 227.3ms | Allocations: 2789)
+Completed 200 OK in 233ms (Views: 225.5ms | ActiveRecord: 5.3ms | Allocations: 3252)
+
+
+Started GET "/rols/new" for 10.0.2.2 at 2021-07-22 01:24:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/new.html.erb within layouts/application
+  Rendered rols/_form.html.erb (Duration: 2.1ms | Allocations: 500)
+  Rendered rols/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 612)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 2469)
+Completed 200 OK in 117ms (Views: 115.8ms | ActiveRecord: 0.0ms | Allocations: 2933)
+
+
+Started POST "/rols" for 10.0.2.2 at 2021-07-22 01:24:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rol"=>{"nombre"=>"Conserje"}, "commit"=>"Create Rol"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mRol Create (24.2ms)[0m  [1m[32mINSERT INTO "rols" ("nombre", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nombre", "Conserje"], ["created_at", "2021-07-22 01:24:35.023710"], ["updated_at", "2021-07-22 01:24:35.023710"]]
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/rols/3
+Completed 302 Found in 108ms (ActiveRecord: 40.3ms | Allocations: 4495)
+
+
+Started GET "/rols/3" for 10.0.2.2 at 2021-07-22 01:24:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRol Load (3.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rols_controller.rb:62:in `set_rol'
+  Rendering layout layouts/application.html.erb
+  Rendering rols/show.html.erb within layouts/application
+  Rendered rols/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 146.8ms | Allocations: 1988)
+Completed 200 OK in 168ms (Views: 152.1ms | ActiveRecord: 3.1ms | Allocations: 2996)
+
+
+Started GET "/rols" for 10.0.2.2 at 2021-07-22 01:24:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/index.html.erb within layouts/application
+  [1m[36mRol Load (4.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/rols/index.html.erb:14
+  Rendered rols/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1022)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | Allocations: 2891)
+Completed 200 OK in 96ms (Views: 90.2ms | ActiveRecord: 4.1ms | Allocations: 3354)
+
+
+Started GET "/rols/new" for 10.0.2.2 at 2021-07-22 01:24:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rols/new.html.erb within layouts/application
+  Rendered rols/_form.html.erb (Duration: 3.7ms | Allocations: 500)
+  Rendered rols/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 612)
+  Rendered layout layouts/application.html.erb (Duration: 161.8ms | Allocations: 2470)
+Completed 200 OK in 170ms (Views: 168.5ms | ActiveRecord: 0.0ms | Allocations: 2934)
+
+
+Started POST "/rols" for 10.0.2.2 at 2021-07-22 01:24:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rol"=>{"nombre"=>"Jefatura"}, "commit"=>"Create Rol"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mRol Create (67.6ms)[0m  [1m[32mINSERT INTO "rols" ("nombre", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nombre", "Jefatura"], ["created_at", "2021-07-22 01:24:45.222463"], ["updated_at", "2021-07-22 01:24:45.222463"]]
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rols_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/rols/4
+Completed 302 Found in 194ms (ActiveRecord: 108.2ms | Allocations: 4616)
+
+
+Started GET "/rols/4" for 10.0.2.2 at 2021-07-22 01:24:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRol Load (8.4ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/rols_controller.rb:62:in `set_rol'
+  Rendering layout layouts/application.html.erb
+  Rendering rols/show.html.erb within layouts/application
+  Rendered rols/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 118.6ms | Allocations: 1977)
+Completed 200 OK in 160ms (Views: 126.8ms | ActiveRecord: 8.4ms | Allocations: 2984)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:24:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (2.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:19
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 1286)
+  Rendered layout layouts/application.html.erb (Duration: 217.4ms | Allocations: 3349)
+Completed 200 OK in 341ms (Views: 236.7ms | ActiveRecord: 2.7ms | Allocations: 5878)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 01:24:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 23.1ms | Allocations: 2407)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 53.5ms | Allocations: 2773)
+  Rendered layout layouts/application.html.erb (Duration: 141.7ms | Allocations: 4768)
+Completed 200 OK in 247ms (Views: 149.5ms | ActiveRecord: 32.4ms | Allocations: 9583)
+
+
+Started POST "/usuarios" for 10.0.2.2 at 2021-07-22 01:25:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"nombre"=>"adsf", "apellido"=>"sdgfjksd", "edad"=>"33", "email"=>"wef@fd.cl", "contrasena"=>"ferjfnekrjne", "rol_id"=>"ererg"}, "commit"=>"Create Usuario"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mRol Load (7.9ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 10.4ms | Allocations: 2009)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 2129)
+  Rendered layout layouts/application.html.erb (Duration: 95.2ms | Allocations: 4111)
+Completed 422 Unprocessable Entity in 479ms (Views: 99.4ms | ActiveRecord: 8.4ms | Allocations: 11439)
+
+
+Started POST "/usuarios" for 10.0.2.2 at 2021-07-22 01:25:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"nombre"=>"adsf", "apellido"=>"sdgfjksd", "edad"=>"33", "email"=>"wef@fd.cl", "contrasena"=>"ferjfnekrjne", "rol_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mRol Load (7.5ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mUsuario Create (36.8ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "apellido", "edad", "email", "contrasena", "rol_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "adsf"], ["apellido", "sdgfjksd"], ["edad", 33], ["email", "wef@fd.cl"], ["contrasena", "ferjfnekrjne"], ["rol_id", 1], ["created_at", "2021-07-22 01:25:49.860294"], ["updated_at", "2021-07-22 01:25:49.860294"]]
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (29.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 209ms (ActiveRecord: 73.8ms | Allocations: 5971)
+
+
+Started GET "/usuarios/1" for 10.0.2.2 at 2021-07-22 01:25:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (15.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:62:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 16.6ms | Allocations: 385)
+  Rendered layout layouts/application.html.erb (Duration: 361.2ms | Allocations: 2255)
+Completed 200 OK in 459ms (Views: 371.5ms | ActiveRecord: 15.2ms | Allocations: 3582)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:26:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (5.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:19
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 847)
+  Rendered layout layouts/application.html.erb (Duration: 235.1ms | Allocations: 2720)
+Completed 200 OK in 247ms (Views: 240.5ms | ActiveRecord: 5.4ms | Allocations: 3184)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 01:26:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 7.4ms | Allocations: 1376)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1488)
+  Rendered layout layouts/application.html.erb (Duration: 406.7ms | Allocations: 3356)
+Completed 200 OK in 426ms (Views: 423.7ms | ActiveRecord: 0.0ms | Allocations: 3827)
+
+
+Started POST "/usuarios" for 10.0.2.2 at 2021-07-22 01:26:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"nombre"=>"erge", "apellido"=>"vaedv", "edad"=>"32", "email"=>"fsdafdv", "contrasena"=>"asdfasdf", "rol_id"=>"4"}, "commit"=>"Create Usuario"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mRol Load (3.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mUsuario Create (22.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "apellido", "edad", "email", "contrasena", "rol_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "erge"], ["apellido", "vaedv"], ["edad", 32], ["email", "fsdafdv"], ["contrasena", "asdfasdf"], ["rol_id", 4], ["created_at", "2021-07-22 01:26:19.014583"], ["updated_at", "2021-07-22 01:26:19.014583"]]
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 96ms (ActiveRecord: 41.5ms | Allocations: 5091)
+
+
+Started GET "/usuarios/2" for 10.0.2.2 at 2021-07-22 01:26:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (13.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:62:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 171.6ms | Allocations: 1991)
+Completed 200 OK in 201ms (Views: 179.3ms | ActiveRecord: 13.3ms | Allocations: 3002)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:26:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (7.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:19
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 946)
+  Rendered layout layouts/application.html.erb (Duration: 320.5ms | Allocations: 2816)
+Completed 200 OK in 329ms (Views: 320.4ms | ActiveRecord: 7.1ms | Allocations: 3279)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:29:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:29:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (3.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/usuarios/index.html.erb:19
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 79.6ms | Allocations: 6911)
+  [1m[36mUsuario Load (7.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:19
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 119.5ms | Allocations: 8829)
+  Rendered layout layouts/application.html.erb (Duration: 1376.4ms | Allocations: 19298)
+Completed 200 OK in 1424ms (Views: 1411.7ms | ActiveRecord: 9.6ms | Allocations: 20551)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 1494.7ms | Allocations: 20942)
+Completed 200 OK in 1719ms (Views: 1539.0ms | ActiveRecord: 16.1ms | Allocations: 29266)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 01:33:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (6.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 60.9ms | Allocations: 6583)
+  Rendered layout layouts/application.html.erb (Duration: 626.8ms | Allocations: 13413)
+Completed 200 OK in 826ms (Views: 664.2ms | ActiveRecord: 16.5ms | Allocations: 19661)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 01:33:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 178.2ms | Allocations: 6411)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 207.8ms | Allocations: 6821)
+  Rendered layout layouts/application.html.erb (Duration: 313.2ms | Allocations: 8807)
+Completed 200 OK in 344ms (Views: 323.2ms | ActiveRecord: 0.0ms | Allocations: 9609)
+
+
+Started GET "/usuarios/" for 10.0.2.2 at 2021-07-22 01:43:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (11.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (4.8ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:43
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 160.2ms | Allocations: 9726)
+  Rendered layout layouts/application.html.erb (Duration: 922.0ms | Allocations: 16840)
+Completed 200 OK in 1191ms (Views: 956.0ms | ActiveRecord: 51.6ms | Allocations: 22939)
+
+
+Started GET "/usuarios/" for 10.0.2.2 at 2021-07-22 01:50:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (18.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (2.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (11.3ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:27
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 373.6ms | Allocations: 9825)
+  Rendered layout layouts/application.html.erb (Duration: 1978.2ms | Allocations: 16873)
+Completed 200 OK in 2200ms (Views: 1828.1ms | ActiveRecord: 203.7ms | Allocations: 23149)
+
+
+Started GET "/usuarios/" for 10.0.2.2 at 2021-07-22 02:02:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 2161)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 2313)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.0ms | Allocations: 8616)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Email</th>
+      <th>Rol</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usuarios.each do |usuario| %>
+      <tr>
+        <td><%= usuario.nombre %></td>
+        <td><%= usuario.apellido %></td>
+        <td><%= usuario.edad %></td>
+        <td><%= usuario.email %></td>
+
+
+        <td>
+        <% @rols.each do |rol| %>
+          <% if rol.id == usuario.rol_id %>
+            <%= rol.nombre %>
+          <% end %>
+        <% end %>
+        </td>
+
+
+
+        <td><%= link_to 'Mostrar', usuario %></td>
+        <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Eliminar', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rols.each do |rol| %>
+      <tr>
+        <td><%= rol.nombre %></td>
+        <td><%= link_to 'Show', rol %></td>
+        <td><%= link_to 'Edit', edit_rol_path(rol) %></td>
+        <td><%= link_to 'Destroy', rol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="field">
+<% collection_select(rol, :rol_id, Rol.all, :id , :nombre %>
+</div>
+<br>
+
+<%= link_to 'Nuevo Usuario', new_usuario_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Usuarios</h1>
+4:    
+5:    <table>
+6:      <thead>
+7:        <tr>
+8:          <th>Nombre</th>
+9:          <th>Apellido</th>
+10:          <th>Edad</th>
+11:          <th>Email</th>
+12:          <th>Rol</th>
+13:          <th colspan="3">Acciones</th>
+14:        </tr>
+15:      </thead>
+16:    
+17:      <tbody>
+18:        <% @usuarios.each do |usuario| %>
+19:          <tr>
+20:            <td><%= usuario.nombre %></td>
+21:            <td><%= usuario.apellido %></td>
+22:            <td><%= usuario.edad %></td>
+23:            <td><%= usuario.email %></td>
+24:    
+25:    
+26:            <td>
+27:            <% @rols.each do |rol| %>
+28:              <% if rol.id == usuario.rol_id %>
+29:                <%= rol.nombre %>
+30:              <% end %>
+31:            <% end %>
+32:            </td>
+33:    
+34:    
+35:    
+36:            <td><%= link_to 'Mostrar', usuario %></td>
+37:            <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+38:            <td><%= link_to 'Eliminar', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+39:          </tr>
+40:        <% end %>
+41:      </tbody>
+42:    </table>
+43:    
+44:    <br>
+45:    <table>
+46:      <thead>
+47:        <tr>
+48:          <th>Nombre</th>
+49:          <th colspan="3"></th>
+50:        </tr>
+51:      </thead>
+52:    
+53:      <tbody>
+54:        <% @rols.each do |rol| %>
+55:          <tr>
+56:            <td><%= rol.nombre %></td>
+57:            <td><%= link_to 'Show', rol %></td>
+58:            <td><%= link_to 'Edit', edit_rol_path(rol) %></td>
+59:            <td><%= link_to 'Destroy', rol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+60:          </tr>
+61:        <% end %>
+62:      </tbody>
+63:    </table>
+64:    
+65:    <br>
+66:    
+67:    <div class="field">
+68:    <% collection_select(rol, :rol_id, Rol.all, :id , :nombre %>
+69:    </div>
+70:    <br>
+71:    
+72:    <%= link_to 'Nuevo Usuario', new_usuario_path %>
+  
+app/views/usuarios/index.html.erb:69: syntax error, unexpected instance variable, expecting ')'
+app/views/usuarios/index.html.erb:69: syntax error, unexpected instance variable, expecting ')'
+app/views/usuarios/index.html.erb:69: syntax error, unexpected instance variable, expecting ')'
+app/views/usuarios/index.html.erb:69: syntax error, unexpected instance variable, expecting ')'
+app/views/usuarios/index.html.erb:69: syntax error, unexpected instance variable, expecting ')'
+app/views/usuarios/index.html.erb:69: syntax error, unexpected instance variable, expecting ')'
+Started GET "/usuarios/" for 10.0.2.2 at 2021-07-22 02:04:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (5.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (4.3ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:27
+  [1m[36mCACHE Rol Load (0.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:68
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 137.2ms | Allocations: 11123)
+  Rendered layout layouts/application.html.erb (Duration: 502.0ms | Allocations: 18264)
+Completed 200 OK in 595ms (Views: 485.4ms | ActiveRecord: 42.2ms | Allocations: 24667)
+
+
+Started GET "/usuarios/" for 10.0.2.2 at 2021-07-22 02:12:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (3.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (3.2ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:27
+  [1m[36mCACHE Rol Load (0.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:69
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 135.5ms | Allocations: 11028)
+  Rendered layout layouts/application.html.erb (Duration: 975.4ms | Allocations: 17924)
+Completed 200 OK in 1256ms (Views: 1019.2ms | ActiveRecord: 31.1ms | Allocations: 24490)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 02:13:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 143.9ms | Allocations: 6401)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 160.6ms | Allocations: 6812)
+  Rendered layout layouts/application.html.erb (Duration: 239.4ms | Allocations: 8796)
+Completed 200 OK in 253ms (Views: 242.7ms | ActiveRecord: 0.0ms | Allocations: 9575)
+
+
+Started GET "/usuarios/" for 10.0.2.2 at 2021-07-22 02:15:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 02:15:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#new as HTML
+Processing by UsuariosController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/usuarios_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  [1m[36mUsuario Load (9.8ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (10.9ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:27
+  [1m[36mCACHE Rol Load (0.2ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:69
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 184.9ms | Allocations: 6911)
+  [1m[36mRol Load (7.6ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/_form.html.erb:46
+  Rendered usuarios/_form.html.erb (Duration: 182.7ms | Allocations: 6055)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 350.4ms | Allocations: 12199)
+  Rendered layout layouts/application.html.erb (Duration: 1376.0ms | Allocations: 23481)
+Completed 200 OK in 1942ms (Views: 1474.7ms | ActiveRecord: 49.3ms | Allocations: 36438)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 1446.1ms | Allocations: 24769)
+Completed 200 OK in 1929ms (Views: 1575.4ms | ActiveRecord: 56.6ms | Allocations: 36080)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 02:15:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  [1m[36mRol Load (7.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/_form.html.erb:46
+  Rendered usuarios/_form.html.erb (Duration: 65.4ms | Allocations: 2454)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 79.0ms | Allocations: 2574)
+  Rendered layout layouts/application.html.erb (Duration: 353.9ms | Allocations: 4462)
+Completed 200 OK in 380ms (Views: 365.4ms | ActiveRecord: 7.1ms | Allocations: 5037)
+
+
+Started POST "/usuarios" for 10.0.2.2 at 2021-07-22 02:17:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"nombre"=>"sdv asd ", "apellido"=>"sdvandkj", "edad"=>"212", "email"=>"dvjknasfj@fmsdklv", "contrasena"=>"sdkjvnadkjf", "rol_id"=>"1"}, "rol"=>{"rol_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:28:in `block in create'
+  [1m[36mRol Load (2.3ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:28:in `block in create'
+  [1m[36mUsuario Create (9.1ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "apellido", "edad", "email", "contrasena", "rol_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "sdv asd "], ["apellido", "sdvandkj"], ["edad", 212], ["email", "dvjknasfj@fmsdklv"], ["contrasena", "sdkjvnadkjf"], ["rol_id", 1], ["created_at", "2021-07-22 02:17:22.952203"], ["updated_at", "2021-07-22 02:17:22.952203"]]
+  ↳ app/controllers/usuarios_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/usuarios/3
+Completed 302 Found in 235ms (ActiveRecord: 25.8ms | Allocations: 11868)
+
+
+Started GET "/usuarios/3" for 10.0.2.2 at 2021-07-22 02:17:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (5.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:63:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 397)
+  Rendered layout layouts/application.html.erb (Duration: 156.7ms | Allocations: 2393)
+Completed 200 OK in 210ms (Views: 164.9ms | ActiveRecord: 5.5ms | Allocations: 3811)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 02:17:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (9.8ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (5.9ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:27
+  [1m[36mCACHE Rol Load (0.0ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:69
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 76.6ms | Allocations: 2903)
+  Rendered layout layouts/application.html.erb (Duration: 246.7ms | Allocations: 4773)
+Completed 200 OK in 256ms (Views: 237.9ms | ActiveRecord: 15.8ms | Allocations: 5262)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2021-07-22 02:18:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (9.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (11.7ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:27
+  [1m[36mCACHE Rol Load (0.4ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:69
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 221.5ms | Allocations: 11102)
+  Rendered layout layouts/application.html.erb (Duration: 1169.7ms | Allocations: 18161)
+Completed 200 OK in 1414ms (Views: 1155.0ms | ActiveRecord: 86.1ms | Allocations: 24452)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 02:18:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  [1m[36mRol Load (3.0ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/_form.html.erb:46
+  Rendered usuarios/_form.html.erb (Duration: 119.2ms | Allocations: 5106)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 149.3ms | Allocations: 5510)
+  Rendered layout layouts/application.html.erb (Duration: 246.8ms | Allocations: 7494)
+Completed 200 OK in 281ms (Views: 256.4ms | ActiveRecord: 3.0ms | Allocations: 8287)
+
+
+Started GET "/usuarios/new" for 10.0.2.2 at 2021-07-22 02:19:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/new.html.erb within layouts/application
+  [1m[36mRol Load (1.9ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/_form.html.erb:42
+  Rendered usuarios/_form.html.erb (Duration: 72.4ms | Allocations: 8017)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 102.6ms | Allocations: 8990)
+  Rendered layout layouts/application.html.erb (Duration: 494.3ms | Allocations: 15344)
+Completed 200 OK in 709ms (Views: 530.5ms | ActiveRecord: 30.9ms | Allocations: 25934)
+
+
+Started GET "/usuarios/2" for 10.0.2.2 at 2021-07-22 02:21:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (4.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:63:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 13.9ms | Allocations: 2454)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 2622)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 22.8ms | Allocations: 14572)
+
+
+  
+ActionView::Template::Error (undefined method `usuario_rol_id' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <strong>Rol:</strong>
+    30:   <%= @rol.usuario_rol_id %>
+    31: </p>
+    32: 
+    33: <%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+  
+app/views/usuarios/show.html.erb:30
+Started GET "/usuarios/2" for 10.0.2.2 at 2021-07-22 02:23:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.9ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:63:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2517)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 2668)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 8.3ms | Allocations: 14647)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <strong>Rol:</strong>
+    30:   <% @rols.each do |rol| %>
+    31:     <% if rol.id == usuario.rol_id %>
+    32:       <%= rol.nombre %>
+    33:     <% end %>
+  
+app/views/usuarios/show.html.erb:30
+Started GET "/usuarios/2" for 10.0.2.2 at 2021-07-22 02:27:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (4.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:63:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 19.8ms | Allocations: 2517)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 2631)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 22.5ms | Allocations: 14458)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <strong>Rol:</strong>
+    30:   <% @rols.each do |rol| %>
+    31:     <% if rol.id == @usuario.rol_id %>
+    32:       <%= rol.nombre %>
+    33:     <% end %>
+  
+app/views/usuarios/show.html.erb:30
+Started GET "/usuarios/2" for 10.0.2.2 at 2021-07-22 02:28:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (2.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:63:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 15.9ms | Allocations: 2588)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2772)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 9.6ms | Allocations: 15267)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <strong>Rol:</strong>
+    30:   <% @rols.each do |rol| %>
+    31:     <% if rol.id == @usuario.rol_id %>
+    32:       <%= rol.nombre %>
+    33:     <% end %>
+  
+app/views/usuarios/show.html.erb:30
+Started GET "/usuarios/" for 10.0.2.2 at 2021-07-22 02:28:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (5.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:18
+  [1m[36mRol Load (61.7ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:27
+  [1m[36mCACHE Rol Load (0.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/index.html.erb:69
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 190.7ms | Allocations: 6189)
+  Rendered layout layouts/application.html.erb (Duration: 604.9ms | Allocations: 11974)
+Completed 200 OK in 639ms (Views: 523.2ms | ActiveRecord: 85.9ms | Allocations: 13117)
+
+
+Started GET "/rols/4" for 10.0.2.2 at 2021-07-22 02:28:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RolsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRol Load (2.1ms)[0m  [1m[34mSELECT "rols".* FROM "rols" WHERE "rols"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/rols_controller.rb:62:in `set_rol'
+  Rendering layout layouts/application.html.erb
+  Rendering rols/show.html.erb within layouts/application
+  Rendered rols/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 2406)
+Completed 200 OK in 75ms (Views: 58.6ms | ActiveRecord: 2.1ms | Allocations: 4558)
+
+
+Started GET "/usuarios/3" for 10.0.2.2 at 2021-07-22 02:28:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (5.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:63:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1439)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1508)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 5.4ms | Allocations: 2625)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <strong>Rol:</strong>
+    30:   <% @rols.each do |rol| %>
+    31:     <% if rol.id == @usuario.rol_id %>
+    32:       <%= rol.nombre %>
+    33:     <% end %>
+  
+app/views/usuarios/show.html.erb:30
+Started GET "/usuarios/3" for 10.0.2.2 at 2021-07-22 02:33:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (4.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:64:in `set_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering usuarios/show.html.erb within layouts/application
+  [1m[36mRol Load (5.5ms)[0m  [1m[34mSELECT "rols".* FROM "rols"[0m
+  ↳ app/views/usuarios/show.html.erb:30
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 61.5ms | Allocations: 3763)
+  Rendered layout layouts/application.html.erb (Duration: 492.3ms | Allocations: 10738)
+Completed 200 OK in 699ms (Views: 513.8ms | ActiveRecord: 52.4ms | Allocations: 22985)
+
+
+Started GET "/" for 10.0.2.2 at 2021-07-22 17:24:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.3ms | Allocations: 264)
+Completed 200 OK in 54ms (Views: 49.6ms | Allocations: 1342)
+
+
+Started GET "/" for 10.0.2.2 at 2021-07-22 17:24:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 261)
+Completed 200 OK in 22ms (Views: 19.3ms | Allocations: 1209)
+
+
