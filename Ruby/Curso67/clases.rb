@@ -47,25 +47,50 @@
 # puts otra.apellido #muestra el nombre de la variable de instancia
 
 
-class Usuario
-    attr_accessor :username ,:password ,:email
-    def initialize(usName="", passWord="", eMail="") #Metodo Constructor
-        @username = usNAme
-        @password = passWord
-        @email = eMail
-      end
+# class Usuario
+#     attr_accessor :username ,:password ,:email
+#     def initialize(usName="", passWord="", eMail="") #Metodo Constructor
+#         @username = usNAme
+#         @password = passWord
+#         @email = eMail
+#       end
+# end
+
+# user = Usuario.new
+# user.username = "adk"
+# user.password = "dvjksdnvas"
+# user.email = "asdfh@gmail.com"
+# puts user.inspect
+# puts user.email
+
+# user2 = Usuario.new("user2","dcvjsndk","dsvbdsj@hotmail.com")
+# puts user2.inspect
+# puts user2.username
+# user2.password="djcefhvbsdfhjbvshfbvd"
+# puts user2.password
+
+# class Fixnum
+#     def quien_soy
+#       puts self
+#     end
+#   end
+#   class String
+#     def quien_soy
+#       puts self
+#     end
+#   end
+
+#   4.quien_soy # => 4
+#   15.quien_soy # => 15
+
+#   "string".quien_soy # => "string"
+#   "Hola Mundo".quien_soy # => "Hola Mundo"
+
+
+def splatting *params
+    params
 end
-
-user = Usuario.new
-user.username = "adk"
-user.password = "dvjksdnvas"
-user.email = "asdfh@gmail.com"
-puts user.inspect
-puts user.email
-
-user2 = Usuario.new("user2","dcvjsndk","dsvbdsj@hotmail.com")
-puts user2.inspect
-puts user2.username
-user2.password="djcefhvbsdfhjbvshfbvd"
-puts user2.password
-
+   puts splatting(1).inspect # => [1]
+   puts splatting(1, 2, 3, 4, 5).inspect # => [1, 2, 3, 4, 5]
+   puts splatting([1,2,3,5], [9,8,7])
+   # => Todos los argumentos estan condensados en un simple arreglo

@@ -1,28 +1,24 @@
-#!/usr/bin/env bash
-# actualizar el sistema completamente
-echo mejorar y actualizar el sistema
 sudo apt-get update
 sudo apt-get -y upgrade
-# instalar node.js para ejecutar comandos js al utilizar Rails
-echo instalando node.js para ejecutar JS y Git
-sudo apt-get install -y nodejs
-sudo apt-get install -y git
-# instalar RVM
-echo instalando RVM
-curl -#LO https://rvm.io/mpapis.asc
-gpg --import mpapis.asc
-# gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-\curl -sSL https://get.rvm.io | bash -s stable
+
+sudo apt-get install git
+git config --global user.name "adriacustico"
+git config --global user.email "adriacustico@gmail.com"
+
+sudo apt install curl
+\curl -sSL https://get.rvm.io | bash
+echo 'source "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
 source /home/vagrant/.rvm/scripts/rvm
+
+sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs
+
 rvm requirements
-# instalar Ruby y establecer 2.3.1 como predeterminada
-echo instalando Ruby
-rvm install 3.0.1
-rvm use 3.0.2 --default
-# instalar Bundler y Rails
-echo instalando Bundler and Rails
-gem install bundler --no-document
-gem install rails -v 6.0.4 --no-document
-# instalar postgres y sus dependencais
-echo instalando psql y sus dependencias
-sudo apt-get install -y postgresql postgresql-contrib libpq-dev
+rvm install ruby
+ruby -v
+rvm --default use 3.7.2
+
+gem install rails
+rails -v
+
+sudo apt-get install npm
+sudo npm install --global yarn
