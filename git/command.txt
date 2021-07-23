@@ -1,0 +1,24 @@
+Mostrar si son directorios o alias, ls -F.
+Lista con colores para diferenciar si son directorios o alias, ls -G.
+Detalla el listado y los tamaños en Bytes, ls -l.
+Realiza el listado indicando Bytes, Kilobytes y Megabytes, ls -lh.
+Muestra los directorios y archivos invisibles, ls -la.
+Limpiar la ventana de terminal clear
+Visualizar el directorio de trabajo pwd
+➜  ~ git:(master) ✗ cd Desktop
+➜  Desktop git:(master) ✗ mkdir test
+➜  Desktop git:(master) ✗ cd test
+➜  test git:(master) ✗ touch index.html styles.css commands.txt
+➜  test git:(master) ✗ ls
+commands.txt index.html   styles.css
+➜  test git:(master) ✗ cd ..
+➜  Desktop git:(master) ✗ mkdir destino
+➜  Desktop git:(master) ✗ rm test/styles.css
+➜  Desktop git:(master) ✗ ls test destino
+destino:
+
+test:
+commands.txt index.html
+➜  Desktop git:(master) ✗ rmdir destino
+➜  Desktop git:(master) ✗ vim test/command.txt
+➜  Desktop git:(master) ✗ 
