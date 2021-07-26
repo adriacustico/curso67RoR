@@ -1,0 +1,28 @@
+➜  Desktop git:(master) ✗ mkdir test
+➜  Desktop git:(master) ✗ cd test
+➜  test git:(master) ✗ touch index.html styles.css
+➜  test git:(master) ✗ git init
+Initialized empty Git repository in /Users/adrianalexis/Desktop/test/.git/
+➜  test git:(master) ✗ code .
+➜  test git:(master) ✗ git add index.html
+➜  test git:(master) ✗ git commit -m "actualizacion html"
+[master (root-commit) 2cdc570] actualizacion html
+ 1 file changed, 15 insertions(+)
+ create mode 100644 index.html
+➜  test git:(master) ✗ git add styles.css
+➜  test git:(master) ✗ git commit "actualizacion de css"
+error: pathspec 'actualizacion de css' did not match any file(s) known to git
+➜  test git:(master) ✗ git commit -m "actualizacion de css"
+[master 2601308] actualizacion de css
+ 1 file changed, 3 insertions(+)
+ create mode 100644 styles.css
+➜  test git:(master) git log
+➜  test git:(master) git revert -n HEAD
+Removing styles.css
+➜  test git:(master) ✗ touch styles.css
+➜  test git:(master) ✗ git add styles.css                  
+➜  test git:(master) ✗ git commit -m "actualizacion de css v2"
+[master 94124d6] actualizacion de css v2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+➜  test git:(master) touch command_git.txt
+➜  test git:(master) ✗ 
